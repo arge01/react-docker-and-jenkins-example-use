@@ -67,7 +67,10 @@ function Table<IMODEL>({
                     return (
                       <tr id={k + '-' + v?.imdbID} key={k + '-' + v?.imdbID}>
                         <td key={k + '-' + '#'}>
-                          {(k + 1) * Number(pageable?.numberOfElements)}
+                          {(Number(pageable?.numberOfElements) *
+                            Number(pageable?.size) +
+                            k +
+                            1) - 10}
                         </td>
                         {columns
                           .filter((f) => f.dataField !== '#')
