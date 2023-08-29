@@ -1,13 +1,16 @@
-import React, { ReactElement, useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from 'react';
 
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import Form from "@components/Forms";
+import Form from '@components/Forms';
 
 type IProps = {
-  isShow: { open: boolean; setOpen: React.Dispatch<React.SetStateAction<boolean>> };
+  isShow: {
+    open: boolean;
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  };
   name: string;
   children: ReactElement | Array<ReactElement>;
   button?: {
@@ -40,19 +43,26 @@ function ModalUpdate({
     setOpen(!open);
   };
 
-  const [body, setBody] = useState<ReactElement | Array<ReactElement>>(children);
+  const [body, setBody] = useState<ReactElement | Array<ReactElement>>(
+    children,
+  );
   useEffect(() => {
     if (Array.isArray(children)) {
       setBody(children);
     } else {
       const a: Array<any> = [];
       const c: Array<any> = [];
-      for (let index = 0; index < children?.props?.children?.[0]?.length; index++) {
+      for (
+        let index = 0;
+        index < children?.props?.children?.[0]?.length;
+        index++
+      ) {
         const element = {
           ...children?.props?.children?.[0]?.[index],
           props: {
             ...children?.props?.children?.[0]?.[index]?.props,
-            defaultValue: data[children?.props?.children?.[0]?.[index]?.props?.field],
+            defaultValue:
+              data[children?.props?.children?.[0]?.[index]?.props?.field],
           },
         };
 
@@ -74,12 +84,16 @@ function ModalUpdate({
     }
   }, [data]);
   return (
-    <Modal isOpen={open} toggle={toggleModal} className={`modal-dialog modal-lg crud-table-modal kron-modal`}>
+    <Modal
+      isOpen={open}
+      toggle={toggleModal}
+      className={`modal-dialog modal-lg crud-table-modal kron-modal`}
+    >
       <ModalHeader toggle={toggleModal}>{name}</ModalHeader>
       <ModalBody>
         <Form
-          btn={{ name: "Güncelle" }}
-          extendButton={{ name: "Kapat", onClick: toggleModal }}
+          btn={{ name: 'Güncelle' }}
+          extendButton={{ name: 'Kapat', onClick: toggleModal }}
           onSubmit={onSubmit}
           submitValidation={submitValidation}
           validationFocus={validationFocus}
@@ -87,7 +101,10 @@ function ModalUpdate({
           {state?.data && (
             <>
               <Form.Hidden field="id" defaultValue={data?.id} />
-              <Form.Hidden field="project.id" defaultValue={state?.data?.project?.id} />
+              <Form.Hidden
+                field="project.id"
+                defaultValue={state?.data?.project?.id}
+              />
             </>
           )}
           {body}
@@ -95,7 +112,12 @@ function ModalUpdate({
       </ModalBody>
       {footer && (
         <ModalFooter>
-          <Button variant="success" type="submit" className="btn btn-success" onClick={button?.onClick}>
+          <Button
+            variant="success"
+            type="submit"
+            className="btn btn-success"
+            onClick={button?.onClick}
+          >
             {button?.name}
           </Button>
           <Button variant="info" className="btn btn-info" onClick={toggleModal}>

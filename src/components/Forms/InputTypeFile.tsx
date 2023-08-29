@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useField, splitFormProps } from "react-form";
+import { useField, splitFormProps } from 'react-form';
 
 const InputField = (props: any) => {
   const [field, fieldOptions] = splitFormProps(props);
@@ -12,7 +12,7 @@ const InputField = (props: any) => {
   const getBase64 = (file: any) => {
     return new Promise((resolve) => {
       let fileInfo;
-      let baseURL: any = "";
+      let baseURL: any = '';
       // Make new FileReader
       const reader = new FileReader();
 
@@ -39,13 +39,17 @@ const InputField = (props: any) => {
   return (
     <>
       <input
-        data-id={`${isTouched ? (error ? "error" : "success") : "error"}`}
+        data-id={`${isTouched ? (error ? 'error' : 'success') : 'error'}`}
         name={field}
         type="file"
         onChange={onChange}
         accept={props.accept}
       />
-      {isValidating ? <em>Validating...</em> : isTouched && error ? <em>{error}</em> : null}
+      {isValidating ? (
+        <em>Validating...</em>
+      ) : isTouched && error ? (
+        <em>{error}</em>
+      ) : null}
     </>
   );
 };
@@ -59,18 +63,33 @@ type IProps = {
   accept?: any | undefined;
 };
 
-function FileForm({ label, field, defaultValue = "", validating, accept }: IProps) {
+function FileForm({
+  label,
+  field,
+  defaultValue = '',
+  validating,
+  accept,
+}: IProps) {
   const validate = (_: any) => {
     return false;
   };
 
   return (
     <label>
-      <span>{label}</span>{" "}
+      <span>{label}</span>{' '}
       {!defaultValue ? (
-        <InputField field={field} validate={validating || validate} accept={accept} />
+        <InputField
+          field={field}
+          validate={validating || validate}
+          accept={accept}
+        />
       ) : (
-        <InputField defaultValue={defaultValue} field={field} validate={validating || validate} accept={accept} />
+        <InputField
+          defaultValue={defaultValue}
+          field={field}
+          validate={validating || validate}
+          accept={accept}
+        />
       )}
     </label>
   );

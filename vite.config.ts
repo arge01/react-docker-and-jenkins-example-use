@@ -7,12 +7,12 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: "events",
-        replacement: "rollup-plugin-node-polyfills/polyfills/events",
+        find: 'events',
+        replacement: 'rollup-plugin-node-polyfills/polyfills/events',
       },
       {
         find: /~(.+)/,
-        replacement: path.resolve(__dirname, "./node_modules/$1"),
+        replacement: path.resolve(__dirname, './node_modules/$1'),
       },
       {
         find: '@',

@@ -1,4 +1,4 @@
-import config from "@/constants/config";
+import config from '@/constants/config';
 
 type Props = {
   footer?: boolean;
@@ -43,10 +43,7 @@ function Footer({ footer = true }: Props) {
                     </a>
                   </li>
                   <li className="list-inline-item">
-                    <a
-                      className="text-muted"
-                      href="/informations"
-                    >
+                    <a className="text-muted" href="/informations">
                       Help Center
                     </a>
                   </li>

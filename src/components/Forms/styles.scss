@@ -4,7 +4,7 @@ button {
   &:focus-visible,
   &:focus-within {
     outline: none;
-    border-color: transparent!important;
+    border-color: transparent !important;
   }
 }
 
@@ -154,12 +154,12 @@ button {
         top: inherit;
       }
 
-      input[type="text"],
-      input[type="email"],
-      input[type="number"],
-      input[type="date"],
-      input[type="password"],
-      input[type="file"],
+      input[type='text'],
+      input[type='email'],
+      input[type='number'],
+      input[type='date'],
+      input[type='password'],
+      input[type='file'],
       textarea,
       select {
         width: 100%;

@@ -1,12 +1,15 @@
-import { Payload } from "@/middleware/reactReducerAction";
+import { Payload } from '@/middleware/reactReducerAction';
 
-import Model, { Iinital } from "@components/Forms/reducers/filtrable/initial";
+import Model, { Iinital } from '@components/Forms/reducers/filtrable/initial';
 
-import { types } from "@components/Forms/reducers/filtrable/type";
+import { types } from '@components/Forms/reducers/filtrable/type';
 
 type Actions = Payload;
 
-export default (state: Iinital = new Model(), { type, payload }: Actions): Iinital => {
+export default (
+  state: Iinital = new Model(),
+  { type, payload }: Actions,
+): Iinital => {
   switch (type) {
     case types.PENDING:
       return {

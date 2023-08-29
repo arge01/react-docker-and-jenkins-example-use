@@ -1,7 +1,7 @@
-import { ITypes } from "@/services";
+import { ITypes } from '@/services';
 
 class Types implements ITypes {
-  private name: string = "_INPUT_FILTRABLE";
+  private name: string = '_INPUT_FILTRABLE';
 
   PENDING: string = `PENDING${this.name}`;
   FINDALL: string = `FINDALL${this.name}`;

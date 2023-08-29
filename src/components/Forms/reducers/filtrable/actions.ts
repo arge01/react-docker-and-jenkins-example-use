@@ -1,5 +1,5 @@
-import { IMODEL } from "@components/Forms/reducers/filtrable/initial";
-import { types } from "@components/Forms/reducers/filtrable/type";
+import { IMODEL } from '@components/Forms/reducers/filtrable/initial';
+import { types } from '@components/Forms/reducers/filtrable/type';
 
 const findAll = (payload: IMODEL) => async (dispatch: any) => {
   dispatch({

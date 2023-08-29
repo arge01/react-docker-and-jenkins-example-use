@@ -91,7 +91,7 @@ function Forms({
         id={`${validationFocus ? 'form-validation' : 'form'}`}
       >
         {children}{' '}
-        <label className='flex-auto'>
+        <label className="flex-auto">
           {extendButton && (
             <>
               <span></span>

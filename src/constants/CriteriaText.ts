@@ -1,32 +1,32 @@
-import { IDataTabel } from "@/services";
+import { IDataTabel } from '@/services';
 
 export const criteriaText = (operator: number) => {
   switch (operator) {
     case 1:
-      return "greaterthan";
+      return 'greaterthan';
 
     case 2:
-      return "lessthan";
+      return 'lessthan';
 
     case 3:
-      return "equals";
+      return 'equals';
 
     case 4:
-      return "like";
+      return 'like';
 
     case 5:
-      return "noteq";
+      return 'noteq';
 
     case 6:
-      return "in";
+      return 'in';
 
     default:
-      return "";
+      return '';
   }
 };
 
 export const columnText = (key: string, columns: Array<IDataTabel<any>>) => {
-  const split = key?.split(".") || [];
+  const split = key?.split('.') || [];
   if (split?.[0] && split?.[1]) {
     return columns.find((f) => f.relation?.name === split[0]);
   } else {

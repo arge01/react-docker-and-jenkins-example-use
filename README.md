@@ -2,41 +2,48 @@
 
 This is a project challenge
 
-  * vite-version: 4.*.*
-  * react-version: 18.*.*
-  * typescript-version: 5.*.*
-  * sass-version: 1.66.*
+- vite-version: 4._._
+- react-version: 18._._
+- typescript-version: 5._._
+- sass-version: 1.66.\*
 
 # System Requirements
 
-  * Node [v18.17.0]
-  * Npm [9.7.2]
-  * Yarn [1.22.19]
-  * Vite [3]
+- Node [v18.17.0]
+- Npm [9.7.2]
+- Yarn [1.22.19]
+- Vite [3]
 
 # Project Settings
 
-  # yarn install
+# yarn install
+
     - Downloading project packages
 
-  # yarn dev 
+# yarn dev
+
     - Starts the project(http:localhost:3000)
-  
-  # yarn build
+
+# yarn build
+
     - Outputs the project
 
-  # yarn watch
+# yarn watch
+
     - Shows the project live
 
-  # yarn eslint-fix
+# yarn eslint-fix
+
     - Shows rule errors in the project
-  
-  # yarn prettier
+
+# yarn prettier
+
     - Automatic solutions for rule errors in the project
 
 # Project Package Structure
 
-  # Dependencies
+# Dependencies
+
     - sass
     - bootstrap
     - reactstrap
@@ -44,8 +51,9 @@ This is a project challenge
       [**Visit the website.**](https://feathericons.com/)<br>
     - redux
     - rooter
-  
-  # Developer Depencies
+
+# Developer Depencies
+
     - vite
     - eslint & eslint-plugins
     - prettier

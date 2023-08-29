@@ -240,7 +240,7 @@ ul.table-btn-group {
       &::before {
         position: absolute;
         display: block;
-        content: "";
+        content: '';
         border-color: transparent;
         border-style: solid;
         top: -11px;
@@ -371,19 +371,19 @@ ul.table-btn-group {
               &.order {
                 &:before {
                   /*content: "\2195";*/
-                  font-family: "Font Awesome 5 free";
-                  content: "\f30c";
+                  font-family: 'Font Awesome 5 free';
+                  content: '\f30c';
                 }
               }
               &.react-bootstrap-table-sort-order {
                 &:before {
-                  font-family: "Font Awesome 5 free";
-                  content: "\f309";
+                  font-family: 'Font Awesome 5 free';
+                  content: '\f309';
                 }
                 &.dropup {
                   &::before {
-                    font-family: "Font Awesome 5 free";
-                    content: "\f30c";
+                    font-family: 'Font Awesome 5 free';
+                    content: '\f30c';
                   }
                 }
               }
@@ -732,7 +732,7 @@ ul.table-btn-group {
           border: none;
           border-radius: 0;
           margin: 0;
-          font-family: "Open Sans", sans-serif;
+          font-family: 'Open Sans', sans-serif;
         }
 
         .btn {
@@ -1132,7 +1132,7 @@ section.bootstrap-table {
             border-color: transparent;
             &::before {
               position: absolute;
-              content: "✔";
+              content: '✔';
               font-size: 7pt;
               top: 0px;
               left: 3px;

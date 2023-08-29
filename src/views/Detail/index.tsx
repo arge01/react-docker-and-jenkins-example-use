@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Dispatch, useEffect } from 'react';
 
 import './style.scss';
@@ -74,7 +73,7 @@ function Detail() {
                         </h5>
                         {movies?.entity?.Ratings?.map((v, k) => (
                           <a
-                            key={k + "-" + v?.Source}
+                            key={k + '-' + v?.Source}
                             href="#"
                             className="badge bg-primary me-1 my-1"
                           >
@@ -118,7 +117,7 @@ function Detail() {
                           </li>
                         </ul>
                       </div>
-                      
+
                       <div className="card-body col-lg-4">
                         <ul className="list-unstyled mb-0">
                           <li className="mb-1">
@@ -175,14 +174,16 @@ function Detail() {
                               data-feather="map-pin"
                               className="feather-sm me-1"
                             ></span>{' '}
-                            Production <a href="#">{movies?.entity?.Production}</a>
+                            Production{' '}
+                            <a href="#">{movies?.entity?.Production}</a>
                           </li>
                           <li className="mb-1">
                             <span
                               data-feather="map-pin"
                               className="feather-sm me-1"
                             ></span>{' '}
-                            BoxOffice <a href="#">{movies?.entity?.BoxOffice}</a>
+                            BoxOffice{' '}
+                            <a href="#">{movies?.entity?.BoxOffice}</a>
                           </li>
                         </ul>
                       </div>

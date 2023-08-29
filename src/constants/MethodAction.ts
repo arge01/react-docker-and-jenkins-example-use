@@ -1,5 +1,5 @@
 export enum MethodAction {
-  Save = "save",
-  Update = "update",
-  Delete = "delete",
+  Save = 'save',
+  Update = 'update',
+  Delete = 'delete',
 }

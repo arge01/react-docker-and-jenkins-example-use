@@ -1,8 +1,8 @@
-import { AxiosPromise } from "axios";
+import { AxiosPromise } from 'axios';
 
-import { OptionType } from "@/constants/OptionType";
+import { OptionType } from '@/constants/OptionType';
 
-import { ReducerModel } from "@/redux/reducers";
+import { ReducerModel } from '@/redux/reducers';
 
 export interface Pageable {
   empty: boolean;
@@ -14,12 +14,12 @@ export interface Pageable {
   totalElements: number;
   totalPages: number;
   sort?: string;
-  direction?: "ASC" | "DESC";
+  direction?: 'ASC' | 'DESC';
   change?: boolean;
 }
 
 export interface Criteria {
-  [key: string]: string | number
+  [key: string]: string | number;
 }
 
 export interface Iinital<MODEL, IENTITY> {
@@ -50,7 +50,7 @@ export interface Iinital<MODEL, IENTITY> {
 export interface IDataTabel<MODEL> {
   dataField: string;
   relation?: {
-    name: ReducerModel<MODEL>["name"] | string;
+    name: ReducerModel<MODEL>['name'] | string;
     objects: Array<OptionType>;
   };
   text: string;
@@ -77,19 +77,19 @@ export interface ITypes {
 
 export interface IForm {
   type:
-    | "text"
-    | "mail"
-    | "number"
-    | "password"
-    | "phone"
-    | "file"
-    | "date"
-    | "checkbox"
-    | "selectbox"
-    | "combobox"
-    | "relation"
-    | "filterable"
-    | "textarea";
+    | 'text'
+    | 'mail'
+    | 'number'
+    | 'password'
+    | 'phone'
+    | 'file'
+    | 'date'
+    | 'checkbox'
+    | 'selectbox'
+    | 'combobox'
+    | 'relation'
+    | 'filterable'
+    | 'textarea';
   disabled?: boolean;
   required: boolean;
   name: string;
@@ -98,23 +98,23 @@ export interface IForm {
   icon: string | undefined;
   defaultValue?: any;
   combo?: {
-    type: "single" | "multi";
+    type: 'single' | 'multi';
     name:
-      | "contactTypes"
-      | "documentTypes"
-      | "environmentTypes"
-      | "relationTypes"
-      | "specificationTypes"
-      | "projectSpecificationTypes"
-      | "projectStatuses"
-      | "projectServiceTypes"
-      | "operationTypes"
+      | 'contactTypes'
+      | 'documentTypes'
+      | 'environmentTypes'
+      | 'relationTypes'
+      | 'specificationTypes'
+      | 'projectSpecificationTypes'
+      | 'projectStatuses'
+      | 'projectServiceTypes'
+      | 'operationTypes'
       | boolean;
-    data: "all" | string | Array<any>;
+    data: 'all' | string | Array<any>;
   };
   filterable?: {
-    name: ReducerModel<any>["name"] | undefined;
-    data: "all" | string | undefined;
+    name: ReducerModel<any>['name'] | undefined;
+    data: 'all' | string | undefined;
     actions: IActions<any, any, any> | undefined;
     filter?: boolean;
     filterColumn?: {
@@ -125,9 +125,9 @@ export interface IForm {
     };
   };
   relation?: {
-    type: "single" | "multi";
+    type: 'single' | 'multi';
     name: string;
-    data: "all" | string;
+    data: 'all' | string;
   };
   options?: Array<OptionType>;
   min?: number;
@@ -147,7 +147,7 @@ export type IPaginationRequestBean = {
   page: number;
   size: number;
   sort?: string;
-  direction?: "ASC" | "DESC";
+  direction?: 'ASC' | 'DESC';
 };
 
 export type ISearchCriteria = Criteria;
@@ -155,7 +155,7 @@ export type ISearchCriteria = Criteria;
 export interface IServices<SAVE, UPDATE, DELETE> {
   findAll: (
     paginationRequestBean?: IPaginationRequestBean,
-    searchCriteriaList?: ISearchCriteria | Array<ISearchCriteria>
+    searchCriteriaList?: ISearchCriteria | Array<ISearchCriteria>,
   ) => AxiosPromise<any>;
   findById: (id: number) => AxiosPromise<any>;
   findByName: (name: string) => AxiosPromise<any>;
@@ -167,7 +167,7 @@ export interface IServices<SAVE, UPDATE, DELETE> {
 export interface IActions<SAVE, UPDATE, DELETE> {
   findAll: (
     paginationRequestBean?: IPaginationRequestBean,
-    searchCriteriaList?: ISearchCriteria | Array<ISearchCriteria>
+    searchCriteriaList?: ISearchCriteria | Array<ISearchCriteria>,
   ) => Promise<any>;
   findById: (id: number) => Promise<any>;
   findByName: (name: string) => Promise<any>;

@@ -161,9 +161,7 @@ export interface IProvider<IMODEL, ICOLUMNS> {
   model?: Model<any, any> | undefined;
   columns: Array<ICOLUMNS>;
   setColumns?:
-    | React.Dispatch<
-        React.SetStateAction<IDataTabel<any>[]>
-      >
+    | React.Dispatch<React.SetStateAction<IDataTabel<any>[]>>
     | undefined;
   data: Iinital<IMODEL, IENTITY> | undefined;
   next?: typeNext;

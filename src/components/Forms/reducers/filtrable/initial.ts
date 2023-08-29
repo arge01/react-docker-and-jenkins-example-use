@@ -1,4 +1,4 @@
-import { OptionType } from "@/constants/OptionType";
+import { OptionType } from '@/constants/OptionType';
 
 export interface Iinital {
   id: string;
@@ -26,8 +26,8 @@ export interface IMODEL {
 }
 
 class Model implements Iinital {
-  id: string = "input_filtrable";
-  name: string = "Input Filtrable";
+  id: string = 'input_filtrable';
+  name: string = 'Input Filtrable';
   field: any = {};
   option!: any;
   options!: any;

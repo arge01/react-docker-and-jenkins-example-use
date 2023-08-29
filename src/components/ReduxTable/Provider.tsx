@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { IDataTabel } from "@/services";
-import React, { createContext } from "react";
+import { IDataTabel } from '@/services';
+import React, { createContext } from 'react';
 
-import { IProvider } from ".";
+import { IProvider } from '.';
 
 const initial: IProvider<any, any> = {
-  name: "",
+  name: '',
   columns: [],
   data: undefined,
   setColumns: function (_value: React.SetStateAction<IDataTabel<any>[]>): void {
-    throw new Error("Function not implemented.");
-  }
-}
+    throw new Error('Function not implemented.');
+  },
+};
 
 type Props = {
   value: IProvider<any, any>;

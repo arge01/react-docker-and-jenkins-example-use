@@ -1,4 +1,4 @@
-import { IForm } from "@/services";
+import { IForm } from '@/services';
 
 export interface IFormSave {
   name: string;
