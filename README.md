@@ -2,10 +2,10 @@
 
 This is a project challenge
 
-  * [vite-version]: 4.*.*
-  * [react-version]: 18.*.*
-  * [typescript-version]: 5.*.*
-  * [sass-version]: 1.66.*
+  * vite-version: 4.*.*
+  * react-version: 18.*.*
+  * typescript-version: 5.*.*
+  * sass-version: 1.66.*
 
 # System Requirements
 
