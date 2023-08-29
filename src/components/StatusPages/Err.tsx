@@ -9,7 +9,7 @@ type Props = {
     | undefined;
 };
 
-function Error({ code }: Props) {
+function Err({ code }: Props) {
   return (
     <div id="error-component">
       <div id="notfound">
@@ -22,11 +22,11 @@ function Error({ code }: Props) {
               <span>{code?.[2] || '4'}</span>
             </h1>
           </div>
-          <h2>we are sorry, but the page you requested was not found</h2>
+          <h2>We are sorry, but the page you requested was not found.</h2>
         </div>
       </div>
     </div>
   );
 }
 
-export default Error;
+export default Err;
