@@ -66,7 +66,7 @@ function Table<IMODEL>({
                   {entities.map((v: any, k: number) => {
                     return (
                       <tr id={k + '-' + v?.imdbID} key={k + '-' + v?.imdbID}>
-                        <td key={k + '-' + '#'}>
+                        <td>
                           {Number(pageable?.numberOfElements) *
                             Number(pageable?.size) +
                             k +

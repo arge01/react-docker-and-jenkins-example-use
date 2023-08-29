@@ -53,7 +53,7 @@ function Detail() {
                         {movies?.entity?.Director}
                       </div>
 
-                      <div>
+                      <div className="img-bottom-button-group">
                         <a
                           className="btn btn-primary btn-sm"
                           target="_blank"
