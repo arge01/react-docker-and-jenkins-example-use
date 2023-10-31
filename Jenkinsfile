@@ -1,13 +1,11 @@
 pipeline {
-     
      agent {  
         docker {
             image 'node' 
             args '-p 3000:3000' 
         }  
     }
-    
-    agent any
+    /*agent any*/
     stages {
         stage('Build') { 
             steps {
