@@ -11,11 +11,16 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/(.*)", 
       "dest": "app/dist/$1"
     }
   ],
   "buildCommand": "yarn build",
   "outputDirectory": "app/dist",
-  "installCommand": "yarn install"
+  "installCommand": "yarn install",
+  "functions": {
+    "app/**/*.ts": {
+      "runtime": "nodejs20.x"
+    }
+  }
 }
