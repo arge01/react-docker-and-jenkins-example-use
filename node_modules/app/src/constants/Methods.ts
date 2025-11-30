@@ -1,0 +1,17 @@
+export enum Methods {
+  GET = 'get',
+  POST = 'post',
+  PUT = 'put',
+  PATCH = 'patch',
+  DELETE = 'delete',
+  COPY = 'copy',
+  HEAD = 'head',
+  OPTIONS = 'options',
+  LINK = 'link',
+  UNLINK = 'unlink',
+  PURGE = 'purge',
+  LOCK = 'lock',
+  UNLOCK = 'unlock',
+  PROFIND = 'profind',
+  VIEW = 'view',
+}
