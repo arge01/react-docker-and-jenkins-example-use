@@ -7,16 +7,16 @@
   "author-link": "https://arifgevenci.com",
   "workspaces": [
     "app",
-    "router"
+    "routers"
   ],
   "scripts": {
     "app:build": "cd app && yarn build",
-    "router:build": "cd router && yarn build",
+    "routers:build": "cd routers && yarn build",
     "app:dev": "cd app && yarn dev",
-    "router:dev": "cd router && yarn dev",
+    "routers:dev": "cd routers && yarn dev",
     "dev": "yarn app:dev",
-    "build": "yarn router:build && yarn app:build",
-    "install:all": "yarn install && cd app && yarn install && cd ../router && yarn install"
+    "build": "yarn routers:build && yarn app:build",
+    "install:all": "yarn install && cd app && yarn install && cd ../routers && yarn install"
   },
   "license": "MIT"
 }
